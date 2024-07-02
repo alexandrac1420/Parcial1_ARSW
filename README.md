@@ -35,7 +35,7 @@ Este proyecto usa inyeccion de dependencias e inversion de control mediante la e
 
 
 ## Nuevas funcionalidades
-En caso de que se necesite implementar otra API, se puede genera otra clase que extienda esta interfaz y se genera la nueva implementación.
+En caso de que se necesite implementar otra API, se puede genera otra clase que implente esta interfaz y se genera la nueva implementación.
 
 
 
