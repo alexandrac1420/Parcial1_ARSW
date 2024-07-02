@@ -24,6 +24,14 @@ public class Parcial1Controller {
     @Autowired
     private Parcial1Service parcial1Service;
 
+
+    /*
+     * Esta funcion devuelve la respuesta del servidor al cliente
+     * @param function
+     * @param symbol
+     * @param interval
+     * @return
+     */
     @RequestMapping(
             value = "/getvalue",
             method = RequestMethod.GET,

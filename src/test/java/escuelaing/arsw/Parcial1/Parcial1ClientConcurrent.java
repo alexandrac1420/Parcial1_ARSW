@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/*
+ * Esta clase permite ejecutar pruebas concurrentes, donde se revisa que las pruebas sean concurrentes
+ */
+
 public class Parcial1ClientConcurrent {
     
     public static void main (String [] args){

@@ -27,7 +27,13 @@ public class Parcial1Service implements Api_Interface{
     private static final String USER_AGENT = "Mozilla/5.0";
     private static final String GET_URL = "https://www.alphavantage.co/query?";
 
- 
+    /*
+     * Este metodo se conecta con la API y devuelve los valores correspondientes a la busqueda de los parametros.
+     * @param function: Este parametro determina el tipo de valoracion: Intraday. Daily, Weekly y Monthly
+     * @Param symbol:  Es el encargado de determinar el nombre de la empresa a la cual se desea conocer el valor de la bolsa
+     * @Param interval: Determina el valor del intervalo que se desea que se muestre en caso de que sea un tipo de valoracion Intraday
+    */
+    
     public String getValueApi(String function, String symbol, String interval) {
         try{
             URL obj = new URL(GET_URL+"function=" +function + "&symbol=" + symbol + ((interval != "") ? "&interval=" + interval : "") + "&apikey=" + KEY);
