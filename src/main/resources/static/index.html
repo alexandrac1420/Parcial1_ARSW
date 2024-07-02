@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Form with GET</h1>
+        <form action="/value">
+            <label for="function">Función:</label>
+            <select id="function" name="function">
+                <option value="TIME_SERIES_INTRADAY">Intraday</option>
+                <option value="TIME_SERIES_DAILY">Daily</option>
+                <option value="TIME_SERIES_WEEKLY">Weekly</option>
+                <option value="TIME_SERIES_MONTHLY">Monthly</option>
+              </select>
+            <br>
+            <label for="symbol">Empresa:</label>
+            <input type="text" id="symbol" name="symbol"><br><br>
+            <br>
+            <label for="interval">Intervalo:</label>
+            <select id="interval" name="interval">
+                <option value="">N/A</option>
+                <option value="1min">1min</option>
+                <option value="5min">5min</option>
+                <option value="15min">15min</option>
+                <option value="30min">30min</option>
+                <option value="60min">60min</option>
+              </select>
+              <br>
+            <input type="button" value="Conusltar" onclick="loadGetMsg()">
+        </form> 
+        <div id="getrespmsg"></div>
+
+        <script>
+            function loadGetMsg() {
+                let functionVar = document.getElementById("function").value;
+                console.log(functionVar);
+                let symbolVar = document.getElementById("symbol").value;
+                console.log(symbolVar);
+                let intervalVar = document.getElementById("interval").value;
+                console.log(intervalVar)
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("getrespmsg").innerHTML =
+                    this.responseText;
+                }
+                xhttp.open("GET", "/getvalue?function="+functionVar+"&symbol="+symbolVar+"&interval="+intervalVar);
+                //console.log(responseText);
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>
