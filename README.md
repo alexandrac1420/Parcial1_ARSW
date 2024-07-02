@@ -136,8 +136,3 @@ Use [GitHub](https://github.com/) para versionar. Para conocer las versiones dis
 
 * **Alexandra Cortes Tovar** - [alexandrac1420](https://github.com/alexandrac1420)
 
-## License
-
-Este proyecto tiene la licencia MIT; consulte el archivo [LICENSE.md](LICENSE.md) para obtener más detalles.
-
-
